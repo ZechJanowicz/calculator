@@ -1,0 +1,35 @@
+* {
+    font-size: 35px;
+}
+
+body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+#calculator-card {
+    height: 400px;
+    width: 350px;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+}
+
+#button-wrapper {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+}
+
+#operators {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#operators > button {
+    height: 100px;
+}
