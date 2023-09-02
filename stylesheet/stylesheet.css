@@ -8,10 +8,25 @@ body {
     justify-content: center;
 }
 
+#placeholder {
+    text-align: end;
+    width: 350px;
+}
+
+#card-box {
+    background-color: pink;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 #calculator-card {
     height: 400px;
-    width: 350px;
+    width: 359px;
     background-color: blue;
     display: flex;
     flex-direction: row;
