@@ -8,8 +8,12 @@ for (i=0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function(event) {
         sum = input.value = input.value + event.currentTarget.value;
         allNumbers = sum.split(" "); 
+        checkedArray = allNumbers;
+        console.table(checkedArray)
+
         if (allNumbers.length = 3) {
-            allNumbers.splice(1, 1);
+            operand = allNumbers.splice(1, 1);
+            console.log(operand)
         }
         return allNumbers
     })
@@ -19,46 +23,42 @@ for (i=0; i < buttons.length; i++) {
 
 
 function multiply() {
-    adding = 0;
-    multiplying = 1;
-    dividing = 0;
-    subtracting = 0;
+    if(checkedArray.length = 3) {
+        total();
+    }
 }
 
 function add() {
-    adding = 1;
-    multiplying = 0;
-    dividing = 0;
-    subtracting = 0;
+    if(checkedArray.length = 3) {
+        total();
+    }
 }
 function subtract() {
-    subtracting = 1;
-    multiplying = 0;
-    adding = 0;
-    dividing = 0;
+    if(checkedArray.length = 3) {
+        total();
+    }
 }
 
 function divide() {
-    dividing = 1;
-    multiplying = 0;
-    adding = 0;
-    subtracting = 0;
+    if(checkedArray.length = 3) {
+        total();
+    }
 }
 
 function total() {
-    if(adding == 1) {
+    if(operand == "+") {
         result = allNumbers.reduce((a, b) => +a + +b);
         clear();
     }
-    else if(multiplying == 1) {
+    else if(operand == "*") {
         result = allNumbers.reduce((a, b) => +a * +b);
         clear();
     }
-    else if(dividing == 1) {
+    else if(operand == "/") {
         result = parseFloat(allNumbers.reduce((a, b) => +a / +b));
         clear();
     }
-    else if (subtracting == 1) {
+    else if (operand == "-") {
         result = allNumbers.reduce((a, b) => +a - +b);
         clear();
     }

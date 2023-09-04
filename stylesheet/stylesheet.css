@@ -14,7 +14,7 @@ body {
 }
 
 #card-box {
-    background-color: pink;
+    background-color: blue;
     width: 800px;
     height: 800px;
     display: flex;
