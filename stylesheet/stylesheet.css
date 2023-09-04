@@ -10,11 +10,12 @@ body {
 
 #placeholder {
     text-align: end;
-    width: 350px;
+    width: 390px;
+    margin-left: 20px;
+    border-radius: 10px;
 }
 
 #card-box {
-    background-color: blue;
     width: 800px;
     height: 800px;
     display: flex;
@@ -47,4 +48,17 @@ body {
 
 #operators > button {
     height: 100px;
+    width: 80px;
+}
+
+.summary-button {
+    background-color: orange;
+}
+
+#button-wrapper > .number-button {
+    background-color: rgb(108, 108, 219);
+}
+
+.reset-button {
+    background-color: orange;
 }

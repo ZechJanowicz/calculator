@@ -9,7 +9,7 @@ for (i=0; i < buttons.length; i++) {
         sum = input.value = input.value + event.currentTarget.value;
         allNumbers = sum.split(" "); 
         checkedArray = allNumbers;
-        console.table(checkedArray)
+        console.log(sum)
 
         if (allNumbers.length = 3) {
             operand = allNumbers.splice(1, 1);
@@ -65,7 +65,10 @@ function total() {
 }
 
 function clear() {
-    sum = input.value = result
+    sum = input.value = result.toPrecision(7);
+     if(sum == "Infinity") {
+        sum = input.value = "Error"
+    }
 }
 
 function reset() {
