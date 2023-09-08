@@ -47,7 +47,7 @@ function divide() {
 
 function total(prec = 10) {
     if(operand == "+") {
-        result = allNumbers.reduce((a, b) => (+a*prec) + +b*prec) / (prec);
+        result = allNumbers.reduce((a, b) => ((+a*prec) + (+b*prec)) / (prec));
         clear();
     }
     else if(operand == "*") {
