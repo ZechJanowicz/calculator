@@ -45,17 +45,17 @@ function divide() {
     }
 }
 
-function total() {
+function total(prec = 10) {
     if(operand == "+") {
-        result = allNumbers.reduce((a, b) => +a + +b);
+        result = allNumbers.reduce((a, b) => (+a*prec) + +b*prec) / (prec);
         clear();
     }
     else if(operand == "*") {
-        result = allNumbers.reduce((a, b) => +a * +b);
+        result = allNumbers.reduce((a, b) => (+a*prec) * (+b*prec) / (prec * prec));
         clear();
     }
     else if(operand == "/") {
-        result = parseFloat(allNumbers.reduce((a, b) => +a / +b));
+        result = parseFloat(allNumbers.reduce((a, b) => (+a*prec) / (+b*prec) / (prec / prec)));
         clear();
     }
     else if (operand == "-") {
@@ -65,7 +65,7 @@ function total() {
 }
 
 function clear() {
-    sum = input.value = result.toPrecision(7);
+    sum = input.value = result
      if(sum == "Infinity") {
         sum = input.value = "Error"
     }
