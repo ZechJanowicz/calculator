@@ -8,8 +8,8 @@ for (i=0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function(event) {
         sum = input.value = input.value + event.currentTarget.value;
         allNumbers = sum.split(" "); 
+        decimalValue();
         checkedArray = allNumbers;
-        console.log(sum)
 
         if (allNumbers.length = 3) {
             operand = allNumbers.splice(1, 1);
@@ -20,6 +20,18 @@ for (i=0; i < buttons.length; i++) {
 }
 }
 
+function decimalValue() {
+    allNumbers.forEach(element => {
+        if (element.includes("." + ".")) {
+            this.input.value = sum.slice(0, -1);
+        }
+        else if (element.includes(".")){
+            document.getElementById('decimalPosition').disabled = true;
+        }
+        else if (!element.includes(" ")) {
+            document.getElementById('decimalPosition').disabled = false;
+        }
+})}
 
 
 function multiply() {
@@ -45,9 +57,9 @@ function divide() {
     }
 }
 
-function total(prec = 10) {
+function total(prec = 100) {
     if(operand == "+") {
-        result = allNumbers.reduce((a, b) => ((+a*prec) + (+b*prec)) / (prec));
+        result = allNumbers.reduce((a, b) => ((+a*prec) + (+b*prec)) / (prec) );
         clear();
     }
     else if(operand == "*") {
