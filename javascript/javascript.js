@@ -22,16 +22,13 @@ for (i=0; i < buttons.length; i++) {
 
 function decimalValue() {
     allNumbers.forEach(element => {
-        if (element.includes("." + ".")) {
-            this.input.value = sum.slice(0, -1);
-        }
-        else if (element.includes(".")){
+        if (element.includes(".")) {
             document.getElementById('decimalPosition').disabled = true;
         }
         else if (!element.includes(" ")) {
             document.getElementById('decimalPosition').disabled = false;
-        }
-})}
+        } 
+    })}
 
 
 function multiply() {
@@ -78,6 +75,10 @@ function total(prec = 100) {
 
 function clear() {
     sum = input.value = result
+    element = sum.toString();
+    if (element.includes(".")) {
+        document.getElementById('decimalPosition').disabled = true;
+    }
      if(sum == "Infinity") {
         sum = input.value = "Error"
     }
