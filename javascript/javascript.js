@@ -68,7 +68,7 @@ function total(prec = 100) {
         clear();
     }
     else if (operand == "-") {
-        result = allNumbers.reduce((a, b) => +a - +b);
+        result = allNumbers.reduce((a, b) => ((+a*prec) - (+b*prec)) / (prec));
         clear();
     }
 }
@@ -80,7 +80,7 @@ function clear() {
         document.getElementById('decimalPosition').disabled = true;
     }
      if(sum == "Infinity") {
-        sum = input.value = "Error"
+        sum = input.value = "Error, please clear"
     }
 }
 
